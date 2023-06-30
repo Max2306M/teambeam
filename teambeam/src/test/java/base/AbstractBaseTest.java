@@ -18,8 +18,10 @@ abstract public class AbstractBaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://novaposhta.ua/");
+
         HomePage homePage = new HomePage(driver);
         homePage.closeCookie();
+
     }
 
 
