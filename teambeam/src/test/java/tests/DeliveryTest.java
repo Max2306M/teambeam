@@ -2,7 +2,7 @@ package tests;
 
 import base.AbstractBaseTest;
 import org.testng.annotations.Test;
-import pages.DepartmentPage;
+import pages.DeliveryPage;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -10,13 +10,12 @@ import java.time.format.DateTimeFormatter;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class DepartmentTest extends AbstractBaseTest {
+public class DeliveryTest extends AbstractBaseTest {
     @Test
-    public void departmentTest() {
-        DepartmentPage departmentPage = new DepartmentPage(driver);
+    public void deliveryTest() {
+        DeliveryPage departmentPage = new DeliveryPage(driver);
 
         departmentPage
-                .closeCookie()
                 .clickDeliveryButton();
 
         assertEquals(driver.getCurrentUrl(), "https://novaposhta.ua/onlineorder/estimatedate");
@@ -35,5 +34,7 @@ public class DepartmentTest extends AbstractBaseTest {
 
         System.out.println(LocalDateTime.now());
         assertTrue(timeNow.contains(dateTimeFromField.toString()));
+
+
     }
 }
