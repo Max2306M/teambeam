@@ -12,16 +12,14 @@ abstract public class AbstractBaseTest {
     protected WebDriver driver;
 
     @BeforeMethod
-    public void openWindow() {
+
+    public void openNovaPostHomePage() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://us.puma.com/us/en");
+        driver.get("https://novaposhta.ua/");
     }
-    public void openBmwPage() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://us.puma.com/us/en/search?q=Bmw");
-    }
+
+
     @AfterMethod
     public void closeWindow() {
         driver.quit();
