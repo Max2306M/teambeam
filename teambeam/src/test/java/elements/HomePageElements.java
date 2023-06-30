@@ -7,4 +7,5 @@ public class HomePageElements  extends AbstractBasePage {
     public HomePageElements(WebDriver driver) {
         super(driver);
     }
+
 }

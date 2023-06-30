@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.HomePage;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,10 @@ abstract public class AbstractBaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://novaposhta.ua/");
+
+        HomePage homePage = new HomePage(driver);
+        homePage.closeCookie();
+
     }
 
 
